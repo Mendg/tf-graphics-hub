@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Team Friendship Graphics Hub — Social Media Resources for Runners</title>
+<meta name="description" content="One place for Team Friendship runners to find, edit, and share social media graphics to power their fundraising." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --navy: #1b365d;
+    --navy-dark: #0f1f3a;
+    --teal: #36bbae;
+    --teal-soft: #55b7a8;
+    --cream: #f8f5f1;
+    --ink: #0d1117;
+    --muted: #8892a6;
+    --card: #161b24;
+    --border: #232a36;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--ink);
+    color: #fff;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    padding: 80px 24px 60px;
+    text-align: center;
+    background:
+      radial-gradient(ellipse at top, rgba(54,187,174,.18), transparent 60%),
+      linear-gradient(180deg, var(--navy-dark) 0%, var(--ink) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--teal);
+    padding: 6px 14px;
+    border: 1px solid rgba(54,187,174,.35);
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 18px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 .accent { color: var(--teal); }
+  .hero p.lede {
+    font-size: clamp(16px, 2vw, 19px);
+    color: #c5cbd6;
+    max-width: 640px;
+    margin: 0 auto 30px;
+  }
+  .hero-cta {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    background: var(--teal);
+    color: #0c2219;
+    padding: 14px 26px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 15px;
+    transition: transform .15s ease, box-shadow .15s ease;
+    box-shadow: 0 10px 30px rgba(54,187,174,.25);
+  }
+  .hero-cta:hover { transform: translateY(-1px); box-shadow: 0 14px 34px rgba(54,187,174,.35); }
+
+  /* Container */
+  main { max-width: 1200px; margin: 0 auto; padding: 60px 24px 100px; }
+  .section { margin-bottom: 60px; }
+  .section-header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 8px; flex-wrap: wrap; }
+  .section-title {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .section-title .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px; height: 28px;
+    background: rgba(54,187,174,.15);
+    color: var(--teal);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .section-sub { color: var(--muted); font-size: 14px; margin-bottom: 22px; max-width: 700px; }
+
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 18px;
+  }
+
+  /* Card */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(54,187,174,.55);
+    background: #1a2130;
+  }
+  .card .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+    align-self: flex-start;
+  }
+  .badge.edit { background: rgba(54,187,174,.15); color: var(--teal); border: 1px solid rgba(54,187,174,.3); }
+  .badge.download { background: rgba(255,178,68,.12); color: #ffb244; border: 1px solid rgba(255,178,68,.3); }
+  .badge.template { background: rgba(137,119,255,.12); color: #a897ff; border: 1px solid rgba(137,119,255,.3); }
+  .badge.page { background: rgba(255,255,255,.06); color: #c5cbd6; border: 1px solid rgba(255,255,255,.12); }
+
+  .card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .card p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 18px;
+    flex-grow: 1;
+  }
+  .card .links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: auto;
+  }
+  .card .links a {
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #c5cbd6;
+    padding: 6px 11px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    transition: all .15s ease;
+  }
+  .card .links a:hover { border-color: var(--teal); color: var(--teal); }
+  .card .links a.primary { background: var(--teal); color: #0c2219; border-color: var(--teal); }
+  .card .links a.primary:hover { filter: brightness(1.08); }
+
+  /* How-to */
+  .howto {
+    background: linear-gradient(135deg, rgba(27,54,93,.5), rgba(54,187,174,.08));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+  .howto h2 { font-size: 20px; font-weight: 800; margin-bottom: 14px; }
+  .howto ol { margin: 0; padding-left: 22px; color: #c5cbd6; font-size: 14px; }
+  .howto ol li { margin-bottom: 6px; }
+  .howto ol li strong { color: #fff; }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 30px 24px 50px;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--teal); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .hero { padding: 60px 20px 40px; }
+    main { padding: 40px 20px 80px; }
+    .section { margin-bottom: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="eyebrow">Team Friendship Runners</span>
+  <h1>Graphics built to help you <span class="accent">raise more</span>.</h1>
+  <p class="lede">Click-to-edit Instagram stories, campaign graphics, Bar Mitzvah templates, and landing pages — everything in one place.</p>
+  <a href="#editable" class="hero-cta">Start with editable graphics →</a>
+</header>
+
+<main>
+
+  <div class="howto">
+    <h2>How to use these graphics</h2>
+    <ol>
+      <li><strong>Open</strong> a graphic page from the cards below.</li>
+      <li><strong>Click any orange-outlined text</strong> to edit it — put in your name, miles, goal, whatever fits.</li>
+      <li><strong>Screenshot</strong> (or use Cmd+Shift+4 on Mac / Win+Shift+S on Windows) to save it.</li>
+      <li><strong>Post</strong> to Instagram Stories, Facebook, WhatsApp — tag friends and drop your fundraiser link.</li>
+    </ol>
+  </div>
+
+  <section class="section" id="editable">
+    <div class="section-header">
+      <div class="section-title"><span class="num">1</span>Editable Story Graphics</div>
+    </div>
+    <p class="section-sub">Click-to-edit text baked right into the page. Customize, screenshot, post.</p>
+    <div class="grid">
+
+      <a href="https://mendg.github.io/team-friendship-graphics/" class="card" target="_blank" rel="noopener">
+        <span class="badge edit">Click to edit</span>
+        <h3>Runner Fundraising Stories</h3>
+        <p>30+ Instagram/Facebook story graphics: punny asks, urgency posts, milestones, thank yous, and specific donation asks.</p>
+        <div class="links">
+          <a href="https://mendg.github.io/team-friendship-graphics/" class="primary" target="_blank" rel="noopener">Open graphics</a>
+          <a href="https://github.com/Mendg/team-friendship-graphics" target="_blank" rel="noopener">Edit on GitHub</a>
+        </div>
+      </a>
+
+      <a href="https://mendg.github.io/sponsor-a-mile-campaign/graphics.html" class="card" target="_blank" rel="noopener">
+        <span class="badge edit">Click to edit</span>
+        <h3>Sponsor a Mile Graphics</h3>
+        <p>Launch announcements, mile-tracker progress updates, "I sponsored a mile" shareables for donors, and urgency posts.</p>
+        <div class="links">
+          <a href="https://mendg.github.io/sponsor-a-mile-campaign/graphics.html" class="primary" target="_blank" rel="noopener">Open graphics</a>
+          <a href="https://github.com/Mendg/sponsor-a-mile-campaign" target="_blank" rel="noopener">Edit on GitHub</a>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div class="section-title"><span class="num">2</span>Story Templates</div>
+    </div>
+    <p class="section-sub">Designed Instagram stories you can screenshot directly or fork and customize.</p>
+    <div class="grid">
+
+      <a href="https://mendg.github.io/fc-athletic-club/stories/story-1-announcement.html" class="card" target="_blank" rel="noopener">
+        <span class="badge template">Instagram Story</span>
+        <h3>FC Athletic Club — Announcement Stories</h3>
+        <p>Four-part story sequence: announcement, product detail, social proof, last call. Drops the vibe of a real athletic campaign.</p>
+        <div class="links">
+          <a href="https://mendg.github.io/fc-athletic-club/stories/story-1-announcement.html" class="primary" target="_blank" rel="noopener">Story 1</a>
+          <a href="https://mendg.github.io/fc-athletic-club/stories/story-2-detail.html" target="_blank" rel="noopener">Story 2</a>
+          <a href="https://mendg.github.io/fc-athletic-club/stories/story-3-social-proof.html" target="_blank" rel="noopener">Story 3</a>
+          <a href="https://mendg.github.io/fc-athletic-club/stories/story-4-last-call.html" target="_blank" rel="noopener">Story 4</a>
+        </div>
+      </a>
+
+      <a href="https://mendg.github.io/purim-graphics/" class="card" target="_blank" rel="noopener">
+        <span class="badge download">Screenshot</span>
+        <h3>Purim Graphics Pack</h3>
+        <p>Holiday-themed Friendship Circle graphics for seasonal fundraising and community posts.</p>
+        <div class="links">
+          <a href="https://mendg.github.io/purim-graphics/" class="primary" target="_blank" rel="noopener">Open graphics</a>
+          <a href="https://github.com/Mendg/purim-graphics" target="_blank" rel="noopener">Source</a>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div class="section-title"><span class="num">3</span>Campaign Pages &amp; Trackers</div>
+    </div>
+    <p class="section-sub">Full landing pages and live trackers you can share or chapter-localize.</p>
+    <div class="grid">
+
+      <a href="https://mendg.github.io/sponsor-a-mile-campaign/" class="card" target="_blank" rel="noopener">
+        <span class="badge page">Campaign page</span>
+        <h3>Sponsor a Mile — Landing</h3>
+        <p>Interactive mile-sponsorship campaign page. Runners share the link and donors pick a mile to back.</p>
+        <div class="links">
+          <a href="https://mendg.github.io/sponsor-a-mile-campaign/" class="primary" target="_blank" rel="noopener">Open page</a>
+          <a href="https://mendg.github.io/sponsor-a-mile-campaign/tracker.html" target="_blank" rel="noopener">Live tracker</a>
+        </div>
+      </a>
+
+      <a href="https://mendg.github.io/tfj-fundraising-tracker/" class="card" target="_blank" rel="noopener">
+        <span class="badge page">Tracker</span>
+        <h3>Jacksonville — Fundraising Tracker</h3>
+        <p>Chapter-level fundraising leaderboard and progress tracker. Template for any Team Friendship chapter challenge.</p>
+        <div class="links">
+          <a href="https://mendg.github.io/tfj-fundraising-tracker/" class="primary" target="_blank" rel="noopener">Open tracker</a>
+        </div>
+      </a>
+
+      <a href="https://mendg.github.io/tf-kili-2026/" class="card" target="_blank" rel="noopener">
+        <span class="badge page">Event page</span>
+        <h3>Kilimanjaro 2026</h3>
+        <p>Full Kilimanjaro climb event landing page — the design template for future Team Friendship expedition pages.</p>
+        <div class="links">
+          <a href="https://mendg.github.io/tf-kili-2026/" class="primary" target="_blank" rel="noopener">Open page</a>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div class="section-title"><span class="num">4</span>Coaching &amp; Resource Hubs</div>
+    </div>
+    <p class="section-sub">For runners who want the full fundraising playbook, not just a single graphic.</p>
+    <div class="grid">
+
+      <a href="https://mendg.github.io/team-friendship-fundraising-course/" class="card" target="_blank" rel="noopener">
+        <span class="badge page">Course</span>
+        <h3>Team Friendship Fundraising Course</h3>
+        <p>Step-by-step course content for runners: build your list, craft your ask, follow up, hit your goal.</p>
+        <div class="links">
+          <a href="https://mendg.github.io/team-friendship-fundraising-course/" class="primary" target="_blank" rel="noopener">Open course</a>
+        </div>
+      </a>
+
+      <a href="https://mendg.github.io/fc-resource-center/" class="card" target="_blank" rel="noopener">
+        <span class="badge page">Resource center</span>
+        <h3>Friendship Circle Resource Center</h3>
+        <p>Central hub of director and program resources — useful context when telling your FC story to donors.</p>
+        <div class="links">
+          <a href="https://mendg.github.io/fc-resource-center/" class="primary" target="_blank" rel="noopener">Open hub</a>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div class="section-title">Want to add or fix a graphic?</div>
+    </div>
+    <p class="section-sub">Every resource above is a public GitHub repo. Anyone on the team can propose edits.</p>
+    <div class="grid">
+      <a href="https://github.com/Mendg?tab=repositories&q=team-friendship&type=public" class="card" target="_blank" rel="noopener">
+        <span class="badge page">GitHub</span>
+        <h3>All Team Friendship repos</h3>
+        <p>Browse the full set of public Team Friendship and Friendship Circle repos to edit or fork.</p>
+        <div class="links">
+          <a href="https://github.com/Mendg?tab=repositories&q=team-friendship&type=public" class="primary" target="_blank" rel="noopener">Browse repos</a>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Built for Team Friendship runners · <a href="https://github.com/Mendg/tf-graphics-hub">Edit this hub on GitHub</a>
+</footer>
+
+</body>
+</html>
